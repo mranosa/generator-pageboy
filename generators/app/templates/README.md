@@ -1,14 +1,9 @@
-# PageBoy Generator
+# [APP-NAME-HERE]
 
-> Yeoman generator for creating end to end tests, using [Protractor] and [Jasmine].
-
-## Prerequisites
-Download and Install [Node] and [Yeoman]
+Generated with [PageBoy Generator](https://github.com/mranosa/generator-pageboy). Have Fun!
 
 ## Usage
-- Install Generator: `npm install -g generator-pageboy`
-- Create and Go to Project Directory: `mkdir my-new-e2e-project && cd $_`
-- Run Generator: `yo pageboy`
+
 - Start Sample App: `npm start`
 - Run Test: `npm test`
 
@@ -70,24 +65,3 @@ yo pageboy:po myPo
 Produces:
 
     www/app/myPo.po.js
-
-
-## License
-
-[MIT license](http://opensource.org/licenses/MIT)
-
-## TODO
-
-- [x] ~~Initial Artifacts~~
-- [x] ~~Initial README~~
-- [x] ~~App Generator~~
-- [ ] Route Subgenerator
-- [ ] PO Subgenerator
-- [ ] Spec Subgenerator
-- [ ] Publish to npm
-
-[Protractor]:https://github.com/angular/protractor
-[Jasmine]:http://jasmine.github.io/2.0/introduction.html
-[Yeoman]:http://yeoman.io/
-[npm]:https://github.com/npm/npm
-[Node]:http://nodejs.org/download/

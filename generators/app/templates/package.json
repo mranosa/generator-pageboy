@@ -1,0 +1,22 @@
+{
+  "name": "e2e-seed",
+  "version": "0.0.1",
+  "author": "Mark Kenneth Ranosa <ken.ranosa@gmail.com>",
+  "description": "Template for Protractor End User Tests",
+  "scripts": {
+    "lint": "node_modules/.bin/jshint e2e/**/*.js",
+    "start": "node app/expressserver.js",
+    "test": "npm run lint && node_modules/.bin/protractor conf/default.conf.js",
+    "install": "./node_modules/.bin/webdriver-manager update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mranosa/e2e-seed"
+  },
+  "dependencies": {
+    "express": "~3.4.0",
+    "protractor": "3.0.0",
+    "jshint": "^2.9.1"
+  },
+  "license": "MIT"
+}

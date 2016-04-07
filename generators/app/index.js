@@ -5,7 +5,7 @@ var yosay = require('yosay');
 
 module.exports = yeoman.Base.extend({
 
-  prompting: function () {
+  prompting: function() {
     var done = this.async();
 
     // Have Yeoman greet the user.
@@ -13,29 +13,30 @@ module.exports = yeoman.Base.extend({
       'Welcome to the unreal ' + chalk.red('generator-pageboy') + ' generator!'
     ));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.props = props;
-      // To access props later use this.props.someAnswer;
-
-      done();
-    }.bind(this));
+    done();
   },
 
-  writing: function () {
+  writing: function() {
+
     this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.templatePath('**/*'),
+      this.destinationRoot()
     );
+
+    this.fs.copy(
+      this.templatePath('**/.*'),
+      this.destinationRoot()
+    );
+
   },
 
-  install: function () {
-    this.installDependencies();
+  install: function() {
+    this.installDependencies({
+      bower: false,
+      npm: true,
+      callback: function() {
+        console.log('Everything is ready!');
+      }
+    });
   }
 });
