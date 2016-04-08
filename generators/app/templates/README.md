@@ -30,7 +30,7 @@ Generates a new route.
 
 Example:
 ```bash
-yo pageboy:route
+yo pageboy:route myRoute
 [?] What is the url of your route? www/app/myRoute
 [?] What is the spec name? mySpec
 ```

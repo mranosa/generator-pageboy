@@ -35,7 +35,7 @@ Generates a new route.
 
 Example:
 ```bash
-yo pageboy:route
+yo pageboy:route myRoute
 [?] What is the url of your route? www/app/myRoute
 [?] What is the spec name? mySpec
 ```
@@ -81,10 +81,10 @@ Produces:
 - [x] ~~Initial Artifacts~~
 - [x] ~~Initial README~~
 - [x] ~~App Generator~~
-- [ ] Route Subgenerator
+- [x] ~~Route Subgenerator~~
 - [ ] PO Subgenerator
 - [ ] Spec Subgenerator
-- [ ] Publish to npm
+- [x] ~~Publish to npm~~
 
 [Protractor]:https://github.com/angular/protractor
 [Jasmine]:http://jasmine.github.io/2.0/introduction.html
