@@ -82,7 +82,7 @@ Produces:
 - [x] ~~Initial README~~
 - [x] ~~App Generator~~
 - [x] ~~Route Subgenerator~~
-- [ ] PO Subgenerator
+- [x] ~~PO Subgenerator~~
 - [ ] Spec Subgenerator
 - [x] ~~Publish to npm~~
 
