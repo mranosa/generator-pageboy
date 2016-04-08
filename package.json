@@ -1,6 +1,6 @@
 {
   "name": "generator-pageboy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "protractor + jasmine + yeoman + pageobjects",
   "homepage": "https://github.com/mranosa/generator-pageboy",
   "author": {
