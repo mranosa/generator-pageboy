@@ -2,40 +2,51 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var _ = require('lodash');
 
 module.exports = yeoman.Base.extend({
 
-  prompting: function () {
-    var done = this.async();
+  constructor: function() {
+    yeoman.Base.apply(this, arguments);
 
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the perfect ' + chalk.red('generator-pageboy') + ' generator!'
-    ));
+    this.argument('name', {
+      type: String,
+      required: true
+    });
+  },
+
+  prompting: function() {
+    var done = this.async(),
+      name = this.name;
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
+      name: 'dir',
+      message: 'Where would you like to create this spec?',
+      default: '/e2e/' + this.name
     }];
 
-    this.prompt(prompts, function (props) {
+    this.prompt(prompts, function(props) {
       this.props = props;
-      // To access props later use this.props.someAnswer;
 
       done();
     }.bind(this));
   },
 
-  writing: function () {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+  writing: function() {
+    var pageName = this.props.dir.split('/').pop(),
+      pageClassName = _.capitalize(_.camelCase(this.name)) + 'Page',
+      specName = this.name;
+
+    this.fs.copyTpl(
+      this.templatePath('specTemplate.js'),
+      this.destinationRoot() + this.props.dir + '/' + pageName + '.' + specName + '.spec.js', {
+        pageName: pageName,
+        pageClassName: pageClassName
+      }
     );
   },
 
-  install: function () {
-    this.installDependencies();
+  install: function() {
+    // Do Nothing
   }
 });

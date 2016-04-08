@@ -83,7 +83,7 @@ Produces:
 - [x] ~~App Generator~~
 - [x] ~~Route Subgenerator~~
 - [x] ~~PO Subgenerator~~
-- [ ] Spec Subgenerator
+- [x] ~~Spec Subgenerator~~
 - [x] ~~Publish to npm~~
 
 [Protractor]:https://github.com/angular/protractor
